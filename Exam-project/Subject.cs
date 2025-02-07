@@ -8,9 +8,9 @@ namespace Exam_project
 {
     public class Subject
     {
-        public int SubjectId { get; set; }
-        public string SubjectName { get; set; }
-        public Exam Exam { get; set; }
+        protected int SubjectId { get; set; }
+        protected string SubjectName { get; set; }
+        protected Exam Exam { get; set; }
 
         public Subject(int subjectId, string subjectName)
         {

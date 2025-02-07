@@ -8,13 +8,13 @@ namespace Exam_project
 {
     public class Question : ICloneable, IComparable<Question>
     {
-        public string Header { get; set; }
-        public string Body { get; set; }
-        public int Mark { get; set; }
-        public List<Answer> AnswerList { get; set; }
-        public int RightAnswerId { get; set; }
+        protected string Header { get; set; }
+        protected string Body { get; set; }
+        protected int Mark { get; set; }
+        protected List<Answer> AnswerList { get; set; }
+        protected int RightAnswerId { get; set; }
 
-        public Question(string header, string body, int mark)
+        protected Question(string header, string body, int mark)
         {
             Header = header;
             Body = body;
