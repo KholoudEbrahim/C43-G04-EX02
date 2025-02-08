@@ -26,14 +26,17 @@ namespace Exam_project
 
                 do
                 {
-                  Console.WriteLine("Please enter your answer (Answer ID):");
-                  isValidInput = int.TryParse(Console.ReadLine(), out userAnswer);
+                    Console.WriteLine("Please enter your answer (Answer ID):");
+                    isValidInput = int.TryParse(Console.ReadLine(), out userAnswer);
 
-                  if (userAnswer < 1 || !isValidInput|| userAnswer > question.AnswerList.Count)
+                    if (userAnswer >= 1 && isValidInput && userAnswer <= question.AnswerList.Count)
                     {
-                    Console.WriteLine($"Invalid input. Please enter a number between 1 and {question.AnswerList.Count}.");
+                        continue;
                     }
-                } while (!isValidInput || userAnswer < 1 || userAnswer > question.AnswerList.Count);
+                    Console.WriteLine($"Invalid input. Please enter a number between 1 and {question.AnswerList.Count}.");
+                } while (!isValidInput
+                || userAnswer < 1
+                || userAnswer > question.AnswerList.Count);
 
                 if (userAnswer == question.RightAnswerId)
                 {

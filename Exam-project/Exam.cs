@@ -8,9 +8,9 @@ namespace Exam_project
 {
     public abstract class Exam
     {
-        protected int Time { get; set; }
-        protected int NumberOfQuestions { get; set; }
-        protected List<Question> Questions { get; set; }
+        public int Time { get; set; }
+        public int NumberOfQuestions { get; set; }
+        public List<Question> Questions { get; set; }
 
 
 

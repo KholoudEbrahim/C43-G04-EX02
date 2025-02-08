@@ -8,8 +8,8 @@ namespace Exam_project
 {
     public class Answer
     {
-        protected int AnswerId { get; set; }
-        protected string AnswerText { get; set; }
+        public int AnswerId { get; set; }
+        public string AnswerText { get; set; }
 
         public Answer(int answerId, string answerText)
         {
